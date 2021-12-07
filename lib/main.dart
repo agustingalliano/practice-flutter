@@ -35,13 +35,11 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Center(
-        child: Text(
-          "Hola, welcome to Flutter",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
-        ),
-      ),
+      body: Center(
+          child: Image.network(
+        "https://upload.wikimedia.org/wikipedia/commons/a/a8/Colibri_coruscans.jpg",
+        height: 300,
+      )),
     );
   }
 }
