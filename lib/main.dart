@@ -37,22 +37,35 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Uso del Scaffold"),
       ),
-      body: Center(
-          child: IconButton(
-            icon: Icon(Icons.access_alarms),
-            onPressed: () {
-            print("Hola");
-            },
-            iconSize: 200,
-          ),
+      body: SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text("ANASHE BOY"),
+            Image.network("https://upload.wikimedia.org/wikipedia/commons/a/a8/Colibri_coruscans.jpg", height: 100,),
+            Image.network("https://thefourwinds.com/wp-content/uploads/2020/08/Four-Winds-Society-Blogs-2.png", height: 100,),
+            Image.network("https://upload.wikimedia.org/wikipedia/commons/a/a8/Colibri_coruscans.jpg", height: 100,),
+            Image.network("https://thefourwinds.com/wp-content/uploads/2020/08/Four-Winds-Society-Blogs-2.png", height: 100,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Habilitar el uso de la camara"),
+                Switch(
+                    value: true,
+                    onChanged:(value) {} ,
+                )
+              ],
+            )
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         child: Icon(Icons.add),
       ),
       drawer: Drawer(),
-      endDrawer: Drawer(),
-      backgroundColor: Colors.black,
     );
   }
 }
