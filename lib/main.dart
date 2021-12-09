@@ -34,12 +34,25 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Uso del Scaffold"),
+      ),
       body: Center(
-          child: Image.network(
-        "https://upload.wikimedia.org/wikipedia/commons/a/a8/Colibri_coruscans.jpg",
-        height: 300,
-      )),
+          child: IconButton(
+            icon: Icon(Icons.access_alarms),
+            onPressed: () {
+            print("Hola");
+            },
+            iconSize: 200,
+          ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: Icon(Icons.add),
+      ),
+      drawer: Drawer(),
+      endDrawer: Drawer(),
+      backgroundColor: Colors.black,
     );
   }
 }
